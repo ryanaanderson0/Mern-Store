@@ -1,15 +1,19 @@
 import './App.css';
 import JumbotronContainer from './components/JumbotronContainer';
-import NavContainer from './components/NavContainer.js';
+import Header from './components/Header.js';
 import CardContainer from './components/CardContainer.js';
+import Footer from './components/Footer.js';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>MERN Store</h1>
-      <NavContainer />
-      <JumbotronContainer />
-      <CardContainer />
+      <Header />
+        <main className='py-3'>
+            <JumbotronContainer />
+            <CardContainer /> 
+        </main>
+      <Footer />
     </div>
   );
 }

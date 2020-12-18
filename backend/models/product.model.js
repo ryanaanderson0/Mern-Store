@@ -8,7 +8,8 @@ const productSchema = new Schema({
     product_description: {type: String, require: true},
     product_notes: {type: String, require: true},
 },  {
-    timestamps: true,
+    
+    timestamps: true, //adds time/date to database when items are created/modified
 });
 
 const Product = mongoose.model('Product', productSchema);
