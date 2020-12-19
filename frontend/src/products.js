@@ -2,7 +2,7 @@ const products = [
    {
     _id: '1',
     name: 'Mern Merlot',
-    image: './assets/images/wine_bottle.jpg',
+    image: '../assets/wine_bottle.jpg',
     description:
         'California- Aromas of black cherries, fresh plums, violet and dark chocolate overwhelm the bouquet. On the palate, the wine is layered with fresh cherries, plums, and mocha, softened by its delicate texture, and given staying power with a long, raspberry and cocoa powder finish',
     type: 'red',
@@ -16,7 +16,7 @@ const products = [
    {
     _id: '2',
     name: 'SASS Savignon Blanc',
-    image: './assets/images/wine_bottle2.jpg',
+    image: '../assets/wine_bottle2.jpg',
     description:
         'California- Aromas of apple, pear, vanilla, and butter. The fresh citrus and tropical fruit flavors blend smoothly with the creamy butter, vanilla, and toasty flavors of barrel fermentation.',
     type: 'white',
@@ -29,7 +29,7 @@ const products = [
    {
     _id: '3',
     name: 'React Rose',
-    image: './assets/images/wine_bottle3.jpg',
+    image: '../assets/wine_bottle3.jpg',
     description:
         ' light in color, yet dark in nature. Aromas of raspberry, strawberry, and watermelon offer a crisp refreshment, perfect to drink anywhere or anytime, because this rosé doesn’t stop when the sun goes down',
     type: 'rose',
@@ -42,7 +42,7 @@ const products = [
    {
     _id: '4',
     name: 'CSS Cabernet Savignon',
-    image: './assets/images/wine_bottle4.jpg',
+    image: '../assets/wine_bottle4.jpg',
     description:
         'California- Aromas of black cherries, fresh plums, violet and dark chocolate overwhelm the bouquet. On the palate, the wine is layered with fresh cherries, plums, and mocha, softened by its delicate texture, and given staying power with a long, raspberry and cocoa powder finish',
     type: 'red',
@@ -54,3 +54,5 @@ const products = [
    }
 
 ]
+
+export default products

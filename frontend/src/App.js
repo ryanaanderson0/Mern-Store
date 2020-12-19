@@ -1,17 +1,18 @@
 import './App.css';
 import JumbotronContainer from './components/JumbotronContainer';
 import Header from './components/Header.js';
-import CardContainer from './components/CardContainer.js';
 import Footer from './components/Footer.js';
+import HomePage from './pages/HomePage.js';
+import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header/>
         <main className='py-3'>
             <JumbotronContainer />
-            <CardContainer /> 
+            <HomePage />
         </main>
       <Footer />
     </div>
