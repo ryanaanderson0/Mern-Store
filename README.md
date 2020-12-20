@@ -5,7 +5,7 @@ The purpose of this project is to create an e-commerce app using MERN stack tech
 
 This app was build using: <strong> MongoDB, React, ExpressJS, NodeJS, and BootStrap </strong>
 
-Goals
+<h3>Goals</h3>
 <ul>
 <li>Add error/success messages when querying the database</li>
 <li>Edit users functionality</li>
