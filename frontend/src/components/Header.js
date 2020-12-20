@@ -14,6 +14,7 @@ const Header = () => {
                     <Nav className="ml-auto">
                         <Nav.Link href="/home"><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
                         <Nav.Link eventKey="link-1"><i className='far fa-smile'></i> Sign In</Nav.Link>
+                        <button>Make A Friend</button>
                     </Nav>
                 </Container>  
             </Navbar>
