@@ -1,25 +1,32 @@
 import './App.css';
-import MastHead from './components/MastHead';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import HomePage from './pages/HomePage.js';
-import AboutPage from './pages/AboutPage.js';
+import ShopPage from './pages/ShopPage.js';
+import { BrowserRouter as Router, Route} from 'react-router-dom'
+import ProductPage from './pages/ProductPage'
 
 
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-        <main className='py-3'>
-            <MastHead />
-            <HomePage />
-            <AboutPage />
-    
-        </main>
-      <Footer />
-    </div>
-  );
+    <Router>
+      <div className="App">
+        <Header/>
+          <main>
+            
+              {/* <MastHead /> */}
+              <Route path='/' component={HomePage} exact />
+              <Route path='/product/:id' component={ProductPage} />
+              <Route path='/shop' component={ShopPage} exact />
+              {/* <AboutPage /> */}
+      
+          </main>
+        <Footer />
+      </div>
+  </Router>
+
+   );
 }
 
 export default App;

@@ -4,6 +4,8 @@ import products from '../products.js'
 import Product from '../components/Product'
 import '../App.css'
 import styled from 'styled-components'
+import MastHead from '../components/MastHead'
+import AboutPage from './AboutPage'
 
 const PrimaryButton = styled.button `
     width: 30%;
@@ -25,8 +27,12 @@ const PrimaryButton = styled.button `
 
 const HomePage = () => {
     return (
-        <div style={{backgroundColor: "#F4F1DE", paddingTop:"7%"}}>
-          <h1>Latest Releases</h1> 
+        <div style={{backgroundColor: "#F4F1DE"}}>
+
+          <MastHead />
+
+
+          <h1 style={{paddingTop: '7%'}}>Latest Releases</h1> 
           <Row>
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
@@ -45,6 +51,8 @@ const HomePage = () => {
 
           <section className="spikes_tan">
           </section>
+
+          <AboutPage />
                
         </div>
     )

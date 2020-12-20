@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import styled from 'styled-components'
+import Rating from './Rating'
+import { Link } from 'react-router-dom'
 
 const SecondaryButton = styled.button `
 
@@ -27,16 +29,27 @@ const Product = ({products}) => {
     return (
     
         <>
+            {/* product img */}
             <Card className='my-3 p-3 shadow'>
                 {/* use a template literal for product href */}
-                <a href={`/product/${products._id}`}>
+                <Link to={`/product/${products._id}`}>
                     <Card.Img src={products.image} variant='top' ></Card.Img> 
-                </a>
-                
+                </Link>
             </Card>
-            <h3>{products.name}</h3>
-            <h4>-{products.year}-</h4>
-           <p><strong>Tasting Notes:</strong>"{products.notes}"</p>
+            {/* product title */}
+            <h3>{products.year} {products.name}</h3>
+            {/* product year */}
+            <h4>${products.price}</h4>
+            {/* product tasting notes */}
+            <p><strong>Tasting Notes:</strong>"{products.notes}"</p>
+            
+            {/* product rating */}
+            <section className='pb-2'>
+                <Rating 
+                    value={products.rating}
+                    text={` ${products.numReviews} reviews`}
+                />
+            </section>
             <SecondaryButton>+Add</SecondaryButton>
         </>
  
