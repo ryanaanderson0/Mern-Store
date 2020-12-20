@@ -3,7 +3,7 @@ import { Navbar, Nav, Container} from 'react-bootstrap';
 
 const Header = () => {
     return (
-        <header>
+        <header style={{backgroundColor:"white"}}>
             <Navbar className="justify-content-center" activeKey="/home">
                 <Container>
                     <Navbar.Brand href='/'>MERN Wine Shoppe</Navbar.Brand>

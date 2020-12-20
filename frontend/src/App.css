@@ -1,6 +1,51 @@
 .App {
   text-align: center;
 }
+.spikes_green {
+  position: relative;
+  background: transparent;
+  height: 5vh;
+}
+
+.spikes_green::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 130px;
+  background-size: 130px 100%;
+  background-image: linear-gradient(135deg, #81B29A 25%, transparent 25%), linear-gradient(225deg, #81B29A 25%, transparent 25%);
+  background-position: 0 0;
+  
+}
+
+.spikes_tan {
+  position: relative;
+  background: transparent;
+  height: 5vh;
+}
+
+.spikes_tan::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 130px;
+  background-size: 130px 100%;
+  background-image: linear-gradient(135deg, #F4F1DE 25%, transparent 25%), linear-gradient(225deg, #F4F1DE 25%, transparent 25%);
+  background-position: 0 0;
+  
+}
+
+strong{
+  color: #bc4749;
+}
 
 .App-logo {
   height: 40vmin;
@@ -11,6 +56,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.primary_button {
+  background-color: pink;
 }
 
 

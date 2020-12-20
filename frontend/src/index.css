@@ -2,10 +2,20 @@ main {
   min-height: 80vh;
 }
 
-.header{
-  box-shadow: 10px 10px 8px #888888;
+h1, h2 {
+  font-family: 'Corben', cursive;
 }
 
+h3, p {
+  font-family: 'Nobile', sans-serif;
+  
+}
+
+p {
+  font-size: 1.50em;
+}
+
+/* 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,7 +23,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
