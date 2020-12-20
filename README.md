@@ -7,7 +7,7 @@ This app was build using: <strong> MongoDB, React, ExpressJS, NodeJS, and BootSt
 
 <h3>Goals</h3>
 <ul>
-<li>Add error/success messages when querying the database</li>
-<li>Edit users functionality</li>
-<li>Display all users</li>
+<li>Implement product review system</li>
+<li>Filter products on 'Shop' page</li>
+<li>Implement lazy load/ animations</li>
 </ul>
