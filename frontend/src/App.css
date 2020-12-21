@@ -59,9 +59,65 @@ strong{
 }
 
 .primary_button {
-  background-color: pink;
+  
+  width: 30%;
+  padding: 10px;
+  background-color: #bc4749;
+  border-radius: 30px;
+  color: white;
+  font-family: 'Nobile', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  border: 5px solid  #b5838d;
+  transition: width .5s;
 }
 
+.primary_button:hover {
+    box-shadow: 5px #888888;
+    width: 35%;
+}
+
+.secondary_button {
+  width: 25%;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #bc4749;
+  font-family: 'Nobile', sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  border: 5px solid  #bc4749;
+  transition: width .5s;
+
+}
+
+.secondary_button:hover{
+
+  box-shadow: 5px #888888;
+  width: 30%;
+}
+
+.tertiary_button {
+  width: 60%;
+  height: 60px;
+  margin-left: 5%;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 30px;
+  color: #bc4749;
+  font-family: 'Nobile', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border: 4px solid  #bc4749;
+
+}
+
+.tertiary_button:hover{
+  background-color: #bc4749;
+  color: white;
+  
+}
+  
 
 .App-header {
   background-color: #282c34;

@@ -1,25 +1,8 @@
 import React from 'react';
 import { Row, Col} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../App.css';
-import styled from 'styled-components';
 
-const PrimaryButton = styled.button `
-    width: 30%;
-    padding: 10px;
-    background-color: #bc4749;
-    border-radius: 30px;
-    color: white;
-    font-family: 'Nobile', sans-serif;
-    font-size: 1.25em;
-    font-weight: bold;
-    border: 5px solid  #b5838d;
-    transition: width .5s;
-
-    &:Hover{
-        box-shadow: 5px #888888;
-        width: 35%;
-    }
-`
 
 const MastHead = () => {
 
@@ -34,7 +17,10 @@ const MastHead = () => {
                     <h3 style={{fontSize: "2em"}} className="py-3">Friends and wine <br/>make the perfect blend</h3>
 
                     <section className=" py-5">
-                        <PrimaryButton >Shop All Wines</PrimaryButton>
+                        <Link >
+                            <button className="primary_button">Shop All Wines </button>
+                        </Link>
+
                         <h3 style={{fontSyle:"italic" , fontSize: "1.25em"}} className=" py-2">We've got the wine covered.</h3>
                     </section>
                     

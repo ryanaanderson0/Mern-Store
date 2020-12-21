@@ -6,7 +6,7 @@ import { Row, Col} from 'react-bootstrap'
 const ShopPage = () => {
     return (
         <div>
-            <h1 style={{backgroundColor: '#e63946'}} className='py-3'>RED WINE</h1>
+            <h1 style={{backgroundColor: '#e63946', marginBottom: '30px'}} className='py-3'>RED WINE</h1>
             <Row>
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
@@ -17,7 +17,7 @@ const ShopPage = () => {
             ))};
           </Row>
 
-          <h1 style={{backgroundColor: '#f2cc8f'}} className='py-3'>WHITE WINE</h1>
+          <h1 style={{backgroundColor: '#f2cc8f',  marginBottom: '30px', marginTop: '30px'}} className='py-3'>WHITE WINE</h1>
 
           <Row>
             {/* map all the product arrays contained in the products.js file and return in columns  */}

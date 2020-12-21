@@ -2,7 +2,7 @@ import React from 'react'
 import {Row, Col} from 'react-bootstrap'
 
 
-const AboutPage = () => {
+const About = () => {
     return (
         <div style={{backgroundColor: "#91ABCA", paddingTop:"6%"}}>
             <h1 className="pt-5"> About Our Wines</h1>
@@ -42,4 +42,4 @@ const AboutPage = () => {
     )
 }
 
-export default AboutPage
+export default About

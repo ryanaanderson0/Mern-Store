@@ -1,21 +1,47 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Image, ListGroup } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import products from '../products'
 import Product from '../components/Product'
+import Rating from '../components/Rating'
 
-const ProductPage = () => {
+const ProductPage = ({ match }) => {
+    const product = products.find(p => p._id === match.params.id)
+
     return (
-        <div>
-           <Row>
-            {/* map all the product arrays contained in the products.js file and return in columns  */}
-            {products.map(products => (
-                <Col sm={12} md={6} lg={4} xl={3}>
-                    {/* pass in the products.map to Product component */}
-                    <Product products={products}/>
-                </Col>
-            ))};
-          </Row>
-        </div>
+        <>
+         <Link to='/shop'>
+            <button className="primary_button mt-4">Back To Wines</button>
+         </Link>
+
+         <Row className='m-5'>
+            <Col md={6}>
+                <Image src={product.image} alt={product.name} fluid ></Image>
+            </Col>
+            <Col md={3}>
+                <ListGroup variant='flush'>
+                    <ListGroup.Item >
+                        <h3>{product.year} {product.name}</h3></ListGroup.Item>
+                    </ListGroup>
+                    <ListGroup.Item>
+                        <Rating 
+                            value={product.rating}
+                            text={`  ${product.numReviews} Reviews`} />
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <strong>Price:</strong> ${product.price}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <strong>Description:</strong> {product.description}
+                    </ListGroup.Item>
+                    <ListGroup.Item>
+                        <strong>Tasting Notes:</strong> {product.notes}
+                    </ListGroup.Item>
+
+                    <button className='tertiary_button mt-5'>Add To Cart</button>
+            </Col>
+         </Row>
+        </>
     )
 }
 

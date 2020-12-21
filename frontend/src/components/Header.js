@@ -4,11 +4,13 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 const Header = () => {
     return (
-        <header style={{backgroundColor:"white"}}>
-            <Navbar className="justify-content-center" activeKey="/home">
+        <header style={{backgroundColor:"white" }} >
+            <Navbar className="justify-content-center shadow-lg" activeKey="/home">
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>MERN Wine Shoppe</Navbar.Brand>
+                        <Navbar.Brand>
+                            <h1 style={{fontSize: '1em'}}>Wine<strong>Friend</strong></h1>
+                        </Navbar.Brand>
                     </LinkContainer>
                     
                     <Nav className="mr-auto">
@@ -16,22 +18,19 @@ const Header = () => {
                             <Nav.Link eventKey="link-1">Shop</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to='/about'>
-                            <Nav.Link eventKey="link-2">About</Nav.Link>
-                        </LinkContainer>
                     </Nav>
 
                     <Nav className="ml-auto">
-                        <LinkContainer to='/cart'>
+                        <LinkContainer to='/cart' className='p-3'>
                             <Nav.Link><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
                         </LinkContainer>
-                        
-                        <LinkContainer to='/login'>
-                            <Nav.Link eventKey="link-1"><i className='far fa-smile'></i> Sign In</Nav.Link>
+
+                        <LinkContainer to='/login' className='p-3 ' style={{ width: "100px"}}>
+                            <Nav.Link eventKey="link-1" ><i className='far fa-smile'></i> Sign In</Nav.Link>
                         </LinkContainer>
                         
-                        <LinkContainer to='/subscribe'>
-                            <button>Make A Friend</button>
+                        <LinkContainer to='/subscribe' >
+                            <button className="tertiary_button">Make A Friend</button>
                         </LinkContainer>
                         
                     </Nav>
