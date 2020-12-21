@@ -22,7 +22,7 @@ const ProductPage = ({ match }) => {
                 <ListGroup variant='flush'>
                     <ListGroup.Item >
                         <h3>{product.year} {product.name}</h3></ListGroup.Item>
-                    </ListGroup>
+                    
                     <ListGroup.Item>
                         <Rating 
                             value={product.rating}
@@ -37,7 +37,7 @@ const ProductPage = ({ match }) => {
                     <ListGroup.Item>
                         <strong>Tasting Notes:</strong> {product.notes}
                     </ListGroup.Item>
-
+                </ListGroup>
                     <button className='tertiary_button mt-5'>Add To Cart</button>
             </Col>
          </Row>

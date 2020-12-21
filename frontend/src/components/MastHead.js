@@ -17,7 +17,7 @@ const MastHead = () => {
                     <h3 style={{fontSize: "2em"}} className="py-3">Friends and wine <br/>make the perfect blend</h3>
 
                     <section className=" py-5">
-                        <Link >
+                        <Link to='/shop'>
                             <button className="primary_button">Shop All Wines </button>
                         </Link>
 

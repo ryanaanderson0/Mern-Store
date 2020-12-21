@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Row, Col} from 'react-bootstrap'
-import products from '../products.js'
 import Product from '../components/Product'
 import '../App.css'
 import MastHead from '../components/MastHead'
 import About from '../components/About'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 
 const HomePage = () => {
+    // useState react hook to initilize products as an empty array
+    const [products, setProducts] = useState([])
+
+    //useEffect react hook, make GET request after HomePage component is rendered
+    useEffect(() => {
+        const fetchProducts = async () => {
+            const { data } = await axios.get('/api/products')
+
+            setProducts(data)
+        }
+        fetchProducts()
+    }, 
+    // fires off when useEffect is changed
+    [])
+
     return (
         <div style={{backgroundColor: "#F4F1DE"}}>
 
           <MastHead />
-
 
           <h1 style={{paddingTop: '7%'}}>Latest Releases</h1> 
           <Row>

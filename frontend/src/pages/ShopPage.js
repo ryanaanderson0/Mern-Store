@@ -7,7 +7,7 @@ const ShopPage = () => {
     return (
         <div>
             <h1 style={{backgroundColor: '#e63946', marginBottom: '30px'}} className='py-3'>RED WINE</h1>
-            <Row>
+            <Row className='pl-4'>
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
                 <Col sm={12} md={6} lg={4} xl={3}>
@@ -19,7 +19,7 @@ const ShopPage = () => {
 
           <h1 style={{backgroundColor: '#f2cc8f',  marginBottom: '30px', marginTop: '30px'}} className='py-3'>WHITE WINE</h1>
 
-          <Row>
+          <Row className='pl-4'>
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
                 <Col sm={12} md={6} lg={4} xl={3}>
@@ -31,7 +31,7 @@ const ShopPage = () => {
 
           <h1 style={{backgroundColor: '#e56b6f'}} className='py-3'> ROSE </h1>
 
-          <Row>
+          <Row className='pl-4'>
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
                 <Col sm={12} md={6} lg={4} xl={3}>
