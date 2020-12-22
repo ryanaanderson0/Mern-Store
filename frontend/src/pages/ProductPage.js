@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col, Image, ListGroup } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import products from '../products'
-import Product from '../components/Product'
+// import Product from '../components/Product'
 import Rating from '../components/Rating'
 
 const ProductPage = ({ match }) => {
@@ -16,7 +16,7 @@ const ProductPage = ({ match }) => {
 
          <Row className='m-5'>
             <Col md={6}>
-                <Image src={product.image} alt={product.name} fluid ></Image>
+                <Image src={product.image} alt={product.name} fluid />
             </Col>
             <Col md={3}>
                 <ListGroup variant='flush'>

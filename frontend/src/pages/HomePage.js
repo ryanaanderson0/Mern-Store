@@ -8,9 +8,11 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 
-const HomePage = () => {
+const HomePage = ({ match}) => {
+
     // useState react hook to initilize products as an empty array
     const [products, setProducts] = useState([])
+
 
     //useEffect react hook, make GET request after HomePage component is rendered
     useEffect(() => {
@@ -30,7 +32,7 @@ const HomePage = () => {
           <MastHead />
 
           <h1 style={{paddingTop: '7%'}}>Latest Releases</h1> 
-          <Row>
+          <Row className="pl-3">
             {/* map all the product arrays contained in the products.js file and return in columns  */}
             {products.map(products => (
                 <Col sm={12} md={6} lg={4} xl={3}>

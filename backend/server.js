@@ -38,5 +38,5 @@ app.get('/api/products', (req, res) => {
 // app.use("/user", userRouter);
 
 app.listen(port, () => {
-  console.log(`Server is running in ${process.env.NODE_ENV} on port: ${port}`);
+  console.log(`Server is running in ${process.env.NODE_ENV} on port: ${port}`.orange);
 });

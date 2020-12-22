@@ -1,6 +1,5 @@
 const products = [
    {
-    _id: '1',
     name: 'Mern Merlot',
     image: '../assets/wine_bottle.jpg',
     description:
@@ -15,7 +14,6 @@ const products = [
    },
 
    {
-    _id: '2',
     name: 'SASS Savignon Blanc',
     image: '../assets/wine_bottle2.jpg',
     description:
@@ -29,7 +27,6 @@ const products = [
     numReviews: 2,
    },
    {
-    _id: '3',
     name: 'React Rose',
     image: '../assets/wine_bottle3.jpg',
     description:
@@ -43,7 +40,6 @@ const products = [
     numReviews: 2,
    },
    {
-    _id: '4',
     name: 'CSS Cabernet Savignon',
     image: '../assets/wine_bottle4.jpg',
     description:

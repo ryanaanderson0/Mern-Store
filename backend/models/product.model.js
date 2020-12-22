@@ -1,17 +1,58 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema;
+import mongoose from 'mongoose'
+
+const reviewSchema = mongoose.Schema({
+    name: { type: String, required: true },
+    rating: { type: Number, required: true },
+    review: { type: String, required: true }
+},{
+    timestamp: true
+})
 
 const productSchema = new Schema({
-    product_name: {type: String, require: true},
-    product_year: {type: Number, require: true},
-    product_type: {type: String, require: true},
-    product_description: {type: String, require: true},
-    product_notes: {type: String, require: true},
-},  {
-    
-    timestamps: true, //adds time/date to database when items are created/modified
-});
+   //use mongoose objectID to reference user data
+   user: {
+       type: mongoose.Schema.Types.ObjectId,
+       required: true,
+       ref: 'User'
+   },
+   name: {
+        type: String,
+        require: true,
+        unique: true,
+    },
+    image: {
+        type: String,
+        require: true,
+       
+    },
+    notes: {
+        type: String,
+        require: true,
+    },
+    year: {
+        type: Number,
+        require: true,
+    },
+    price: {
+        type: Number,
+        require: true,
+    },
+    rating: {
+        type: Number,
+        require: true,
+        default: 0
+    },
+    numReviews: {
+        type: Number,
+        require: true,
+        defualt: 0
+    },
+    reviews: [reviewSchema]
 
-const Product = mongoose.model('Product', productSchema);
+}, {
+    timestamps: true
+})
 
-module.exports = Product;
+const Product = mongoose.model('Product', productSchema)
+
+export default Product;
