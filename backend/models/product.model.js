@@ -8,7 +8,7 @@ const reviewSchema = mongoose.Schema({
     timestamp: true
 })
 
-const productSchema = new Schema({
+const productSchema =  mongoose.Schema({
    //use mongoose objectID to reference user data
    user: {
        type: mongoose.Schema.Types.ObjectId,

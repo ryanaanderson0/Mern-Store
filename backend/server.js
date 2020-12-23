@@ -2,8 +2,8 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import express from 'express'
 import colors from 'colors'
-import products from './data/products.js'
 import connectDB from './config/db.js'
+import productRoute from './routes/productRoute.js'
 
 dotenv.config()
 
@@ -28,6 +28,16 @@ app.get('/', (req, res) => {
 app.get('/api/products', (req, res) => {
   res.json(products)
 })
+
+app.get('/api/products/:id', (req, res) => {
+  const product = products.find((p) => p._id === req.params.id)
+  res.json(product)
+})
+
+
+//anything that uses api/products will be linked to productRoute
+app.use('/api/product', productRoute)
+
 
 // // imports exercises & user routes
 // const productRouter = require("./routes/product"); 
