@@ -25,7 +25,7 @@ const Header = () => {
                             <Nav.Link><i className='fas fa-shopping-cart'></i>Cart</Nav.Link>
                         </LinkContainer>
 
-                        <LinkContainer to='/login' className='p-3 ' style={{ width: "100px"}}>
+                        <LinkContainer to='/login' className='p-3 '>
                             <Nav.Link eventKey="link-1" ><i className='far fa-smile'></i> Sign In</Nav.Link>
                         </LinkContainer>
                         
