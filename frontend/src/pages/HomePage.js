@@ -7,6 +7,9 @@ import About from "../components/About";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/prouductActions";
+import Message from '../components/Message'
+import Loader from '../components/Loader'
+
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -28,11 +31,11 @@ const HomePage = () => {
 
       <h1 style={{ paddingTop: "7%" }}>Latest Releases</h1>
 
-      {/* //loading and error conditional */}
+      {/*loading and error conditional */}
       {loading ? (
-        <h3>Loading...</h3>
+        <Loader />
       ) : error ? (
-        <h3>{error}</h3>
+        <Message variant='danger'>{error}</Message>
       ) : (
         <Row className="pl-3">
           {/* map all the product arrays contained in the products.js file and return in columns  */}
