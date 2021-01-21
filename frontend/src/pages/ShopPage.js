@@ -33,10 +33,10 @@ const ShopPage = () => {
         ) : (
             <Row className="pl-3">
             {/* map all the product arrays contained in the products.js file and return in columns  */}
-            {products.map((products) => (
+            {products.map((product) => (
               <Col sm={12} md={6} lg={4} xl={3}>
                 {/* pass in the products.map to Product component */}
-                <Product products={products} />
+                <Product products={product} />
               </Col>
             ))}
             ;
@@ -51,10 +51,10 @@ const ShopPage = () => {
         ) : (
                 <Row className='pl-4'>
                 {/* map all the product arrays contained in the products.js file and return in columns  */}
-                {products.map(products => (
+                {products.map(product => (
                     <Col sm={12} md={6} lg={4} xl={3}>
                         {/* pass in the products.map to Product component */}
-                        <Product products={products}/>
+                        <Product products={product}/>
                     </Col>
                 ))};
             </Row>
@@ -68,10 +68,10 @@ const ShopPage = () => {
         ) : (
                 <Row className='pl-4'>
                 {/* map all the product arrays contained in the products.js file and return in columns  */}
-                {products.map(products => (
+                {products.map(product => (
                     <Col sm={12} md={6} lg={4} xl={3}>
                         {/* pass in the products.map to Product component */}
-                        <Product products={products}/>
+                        <Product products={product}/>
                     </Col>
                 ))};
             </Row>

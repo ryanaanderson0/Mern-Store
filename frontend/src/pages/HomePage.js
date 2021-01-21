@@ -19,6 +19,7 @@ const HomePage = () => {
   //destructure data we want from the state (loading boolean, error, and products)
   const { loading, error, products } = productList
 
+
   //useEffect react hook, make GET request after HomePage component is rendered
   useEffect(() => {
       dispatch(listProducts())
@@ -39,10 +40,10 @@ const HomePage = () => {
       ) : (
         <Row className="pl-3">
           {/* map all the product arrays contained in the products.js file and return in columns  */}
-          {products.map((products) => (
+          {products.map((product) => (
             <Col sm={12} md={6} lg={4} xl={3}>
               {/* pass in the products.map to Product component */}
-              <Product products={products} />
+              <Product products={product} />
             </Col>
           ))}
           ;

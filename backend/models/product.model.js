@@ -23,9 +23,12 @@ const productSchema =  mongoose.Schema({
     image: {
         type: String,
         require: true,
-       
     },
     notes: {
+        type: String,
+        require: true,
+    },
+    description: {
         type: String,
         require: true,
     },
@@ -34,6 +37,10 @@ const productSchema =  mongoose.Schema({
         require: true,
     },
     price: {
+        type: Number,
+        require: true,
+    },
+    countInStock: {
         type: Number,
         require: true,
     },
